@@ -10,4 +10,4 @@ wikipedia
 
 langchain_text_splitters
 
-
+sentence-transformers
