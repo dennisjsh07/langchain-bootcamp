@@ -11,3 +11,8 @@ wikipedia
 langchain_text_splitters
 
 sentence-transformers
+
+python-dotenv
+langchain-openai
+langchain-chroma>=0.1.2
+chromadb>=0.3.23
