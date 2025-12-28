@@ -11,6 +11,7 @@ wikipedia
 langchain_text_splitters
 
 sentence-transformers
+langchain_huggingface
 
 python-dotenv
 langchain-openai
