@@ -6,5 +6,5 @@ venv
 # chroma_db
 chroma_db/
 
-# faiss_db
-faiss_db/
+# faiss_index
+faiss_index/
