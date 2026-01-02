@@ -18,3 +18,5 @@ langchain-openai
 langchain-chroma>=0.1.2
 chromadb>=0.3.23
 faiss-cpu
+
+beautifulsoup4
