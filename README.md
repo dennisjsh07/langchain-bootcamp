@@ -61,3 +61,52 @@ This is why:
 - lower = better (distance)
 
   0.0 ≈ perfect match
+
+## End-to-End RAG Pipeline
+
+    User question → retrieve relevant chunks → inject into prompt → LLM answers using only that context
+
+User Question  
+↓  
+Embed Query  
+↓  
+Vector DB (Similarity / MMR)  
+↓  
+Top-k Chunks  
+↓  
+Prompt Template  
+↓  
+LLM  
+↓  
+Grounded Answer
+
+### Debugging an end-to-end RAG (must-do)
+
+#### Print retrieved docs:
+
+    docs = retriever.invoke("Was freedom gifted?")
+    for d in docs:
+        print(d.page_content)
+
+If retrieval is wrong → fix retrieval
+
+- Not prompt
+- Not model
+
+### Control hallucinations (important)
+
+#### Low temperature:
+
+    llm = Ollama(model="llama3", temperature=0)
+
+## Performance tuning knobs
+
+| Knob              | Effect              |
+| ----------------- | ------------------- |
+| chunk_size        | precision vs recall |
+| k                 | context breadth     |
+| MMR               | diversity           |
+| temperature       | creativity          |
+| prompt strictness | hallucinations      |
+
+**Note : LLM will answer the query based on the context that is fed after retreival from vector store hence if If RAG fails, debug retrieval first — generation is the last step.**
