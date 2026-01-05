@@ -15,8 +15,11 @@ langchain_huggingface
 
 python-dotenv
 langchain-openai
+langchain-ollama
 langchain-chroma>=0.1.2
 chromadb>=0.3.23
 faiss-cpu
 
 beautifulsoup4
+streamlit>=1.20.0
+streamlit-chat
