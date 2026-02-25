@@ -24,3 +24,8 @@ faiss-cpu
 beautifulsoup4
 streamlit>=1.20.0
 streamlit-chat
+
+fastapi
+uvicorn 
+
+
